@@ -1,0 +1,20 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>   
+            <th>Name</th>
+            <th>Email</th>
+            <th>Delete</th>
+            <th>Edit</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.id}}</td>    
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td> <a style="cursor: pointer;" (click)= "deleteUser(user)">Delete</a></td>
+            <td> <a [routerLink]="['/edituser', user.id]"> Edit </a></td>
+        </tr>
+    </tbody>
+</table>

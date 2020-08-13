@@ -1,0 +1,21 @@
+<h1>{{test}}</h1>
+<h1>{{test1}}</h1>
+<h1>{{testname}}</h1>
+
+<form>
+<label>coursename</label>
+<input type="text" name="compname" class="form-control" [(ngModel)]="compname">
+<label>coursedesc</label>
+<input type="text" name="compdesc" class="form-control" [(ngModel)]="compdesc">
+
+
+{{compname}}
+{{compdesc}}
+</form>
+
+<button class="btn btn-primary" (click)="addCourse()">Add Course</button> 
+
+<div *ngFor="let course of courses">
+    <h3>{{course.name}} - {{course.desc}}</h3>
+</div>
+

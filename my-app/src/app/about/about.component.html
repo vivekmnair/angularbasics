@@ -1,0 +1,24 @@
+<main>
+    <div class="container">
+        <nav class="navbar navbar-fixed-top navbar-default navbar-right">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand">Real Mentor</a>
+                    <ul class="nav navbar-nav" routerLinkActive="active">
+                        <li *ngIf="authservice.authenticated" class="nav-item"><a class="nav-link" routerLink="description">description</a></li>
+                        <li *ngIf="!authservice.authenticated"class="nav-item"><a class="nav-link" routerLink="newuser">newuser</a></li>
+                        <li *ngIf="authservice.authenticated" class="nav-item"><a class="nav-link" routerLink="settings">settings</a></li>
+                        <li *ngIf="authservice.authenticated"class="nav-item"><a class="nav-link" routerLink="additionalsettings">Additional settings</a></li>
+                        <li *ngIf="!authservice.authenticated"class="nav-item"><a class="nav-link" routerLink="login">login</a></li>
+                        <li *ngIf="authservice.authenticated"class="nav-item"><a class="nav-link" routerLink="logout">logout</a></li>
+                        <li *ngIf="authservice.authenticated"class="nav-item"><a class="nav-link" routerLink="searchuser">search user</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <br>
+        <br>
+        <br>
+        <router-outlet></router-outlet>
+    </div>
+</main>
